@@ -1,0 +1,10 @@
+import NewItem from './new-item';
+
+export default function Page() {
+  return (
+    <main className="p-4">
+      <h1 className="text-lg font-bold mb-6 text-blue-800">Add New Item</h1>
+      <NewItem />
+    </main>
+  );
+}
