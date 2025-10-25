@@ -5,8 +5,8 @@ import Item from './item';
 export default function ItemList({ items }) {
   const [sortBy, setSortBy] = useState('name');
 
-  // Create a sorted copy of the items array
-  const sortedItems = [...itemsData].sort((a, b) => {
+  // Create a sorted copy of the items array passed in from props
+  const sortedItems = [...items].sort((a, b) => {
     if (sortBy === 'name') {
       return a.name.localeCompare(b.name);
     } else if (sortBy === 'category') {
