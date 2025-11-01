@@ -4,16 +4,20 @@ import Item from './item';
 export default function ItemList({ items, onItemSelect }) {
   const [sortBy, setSortBy] = useState('name');
 
+  // Sort items by name or category
   const sortedItems = [...items].sort((a, b) =>
     a[sortBy].localeCompare(b[sortBy])
   );
 
   return (
     <div>
+      {/* Sorting buttons */}
       <div className="mb-4 space-x-2">
         <button onClick={() => setSortBy("name")} className="btn">Sort by Name</button>
         <button onClick={() => setSortBy("category")} className="btn">Sort by Caregort</button>
       </div>
+
+      {/* Render each item and pass onItemSelect */}
       <ul className="grid gap-3">
         {sortedItems.map((item, index) => (
           <Item
