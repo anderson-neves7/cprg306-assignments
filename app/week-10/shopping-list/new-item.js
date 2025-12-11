@@ -13,12 +13,7 @@ export default function NewItem({ onAddItem }) {
     event.preventDefault();
 
     // Create a new item object with a unique ID
-    const Item = {
-      id: crypto.randomUUID(),
-      name,
-      quantity,
-      category,
-    };
+    const newItem = { id: crypto.randomUUID(), name, quantity, category };
 
     // Pass the new item to the parent component
     onAddItem(newItem);
@@ -27,7 +22,7 @@ export default function NewItem({ onAddItem }) {
     setName('');
     setQuantity(1);
     setCategory('produce');
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit} className="bg-red-200 p-6 rounded shadow max-w-md space-y-4">
