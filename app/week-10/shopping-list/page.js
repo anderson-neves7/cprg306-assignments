@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useUserAuth } from "../../contexts/AuthContext";
-import itemsData from './items.json';
 import NewItem from './new-item';
 import ItemList from './item-list';
 import MealIdeas from "./meal-ideas";

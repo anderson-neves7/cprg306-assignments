@@ -18,8 +18,13 @@ export default function Home() {
         <Link href="/week-7">Go to Week 7 Page</Link>
         <br />
         <Link href="/week-8">Go to Week 8 Page</Link>
+        <br />
+        <Link href="/week-9">Go to Week 9 Page</Link>
+        <br />
+        <Link href="/week-10">Go to Week 10 Page</Link>
       </nav>
       <p>Welcome to my assignment hub. Click above to view Week 2.</p>
     </main>
   );
 }
+
